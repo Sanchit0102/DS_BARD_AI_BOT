@@ -147,7 +147,7 @@ async def grp_res(client, message):
     sticker_file_id = "CAACAgQAAx0CbdTo9gACTmpnI2yEAURPYqvzGLANhwapRXyHgwACbg8AAuHqsVDaMQeY6CcRoh4E"
     thinkStc = await message.reply_sticker(sticker_file_id)
     await send_typing_action(client, message.chat.id, duration=2)
-    await ai_res(message, grp_query)
+    await ai_res(message, query, grp_query)
     # user_cooldowns[coolDownUser] = current_time
     await thinkStc.delete()
     return
@@ -186,7 +186,7 @@ async def AiMsgHanDl(client, message):
     thinkStc = await message.reply_sticker(sticker_file_id)
     await send_typing_action(client, message.chat.id, duration=2)
     private_query = message.text
-    await ai_res(message, private_query)
+    await ai_res(message, query, private_query)
     user_cooldowns[coolDownUser] = current_time
     await thinkStc.delete()
     return
