@@ -54,11 +54,11 @@ async def bardandgemini(_: Client, message: Message):
                 )
 
 
-async def ai_res(client, message, query):
+async def ai_res(message, query):
     try:
         userMention = message.from_user.mention()
-        DS = f"You are a helpful assistant. Your name is Cypher."
-        obj = {'query' : query ,'bot_name' : BOT_NAME , 'bot_admin'  :ADMIN_NAME , 'system_prompt' : DS }
+        #DS = f"You are a helpful assistant. Your name is Cypher."
+        obj = {'query' : query ,'bot_name' : BOT_NAME , 'bot_admin' : ADMIN_NAME} # , 'system_prompt' : DS }
         url = f"https://bisal-ai-api.vercel.app/biisal"  # dont try to change anything here ⚠️
         res = requests.post(url , data=obj)
         if res.status_code == 200:
@@ -177,10 +177,12 @@ async def AiMsgHanDl(client, message):
         await asyncio.sleep(remaining_time)
         await remTimeMsg.delete()
         return
+        """
     try:
         await message.react(emoji=random.choice(REACTIONS))
     except Exception:
         pass
+        """
     sticker_file_id = "CAACAgQAAx0CbdTo9gACTmpnI2yEAURPYqvzGLANhwapRXyHgwACbg8AAuHqsVDaMQeY6CcRoh4E"
     thinkStc = await message.reply_sticker(sticker_file_id)
     await send_typing_action(client, message.chat.id, duration=2)
