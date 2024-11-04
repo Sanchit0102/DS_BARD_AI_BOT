@@ -57,7 +57,7 @@ async def bardandgemini(_: Client, message: Message):
 async def ai_res(client, message, query):
     try:
         userMention = message.from_user.mention()
-        DS = f"You are a helpful assistant. Your name is Cypher, and your developer / owner's name is Sanchit, known as <a href='https://t.me/the_ds_official'>ՏIᒪᗴᑎT ᘜᕼOՏT ⚡️</a>."
+        DS = f"You are a helpful assistant. Your name is Cypher."
         obj = {'query' : query ,'bot_name' : BOT_NAME , 'bot_admin'  :ADMIN_NAME , 'system_prompt' : DS }
         url = f"https://bisal-ai-api.vercel.app/biisal"  # dont try to change anything here ⚠️
         res = requests.post(url , data=obj)
