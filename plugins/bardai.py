@@ -118,7 +118,7 @@ async def grp_res(client, message):
     print(grp_query)
     if not grp_query:
         return await message.reply_text(
-            "<b>Abe gadhe /bard k baad kuch likh to le !!.\n\nExample Use:\n<code>/bard Who is lord krshna??</code>\n\nHope you got it.Try it now..</b>"
+            "<b>Abe gadhe /bard k baad kuch likh to le !!.\n\nExample Use:\n<code>/bard Who is lord krishna??</code>\n\nHope you got it.Try it now..</b>"
         )
     '''
     current_time = time.time()
