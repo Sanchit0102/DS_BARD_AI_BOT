@@ -24,7 +24,7 @@ Asᴋ Mᴇ Aɴʏᴛʜɪɴɢ...Dɪʀᴇᴄᴛʟʏ..
 
     HELP = """<b>Want Any Help Then Contact My Developer !!. 😎
     
-    Because My Developer Don't Have Time To Write Code For Help</b> 😓"""
+Because My Developer Don't Have Time To Write Code For Help</b> 😓"""
 
 
     SOURCE = """<b>bkk BC !</b> """
