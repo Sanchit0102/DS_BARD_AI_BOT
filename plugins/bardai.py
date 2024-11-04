@@ -57,9 +57,8 @@ async def bardandgemini(_: Client, message: Message):
 async def ai_res(client, message, query):
     try:
         userMention = message.from_user.mention()
-        system_prompt = ("""You are a helpful assistant. Your name is Cypher, and your developer / owner's name is Sanchit, known as <a href='https://t.me/the_ds_official'>ՏIᒪᗴᑎT ᘜᕼOՏT ⚡️</a>.""")
-        query = f"{system_prompt}\n\nUser: {query}"
-        obj = {'query' : query ,'bot_name' : BOT_NAME , 'bot_admin'  :ADMIN_NAME }
+        DS = f"You are a helpful assistant. Your name is Cypher, and your developer / owner's name is Sanchit, known as <a href='https://t.me/the_ds_official'>ՏIᒪᗴᑎT ᘜᕼOՏT ⚡️</a>."
+        obj = {'query' : query ,'bot_name' : BOT_NAME , 'bot_admin'  :ADMIN_NAME , 'system_prompt' : DS }
         url = f"https://bisal-ai-api.vercel.app/biisal"  # dont try to change anything here ⚠️
         res = requests.post(url , data=obj)
         if res.status_code == 200:
@@ -147,7 +146,7 @@ async def grp_res(client, message):
     sticker_file_id = "CAACAgQAAx0CbdTo9gACTmpnI2yEAURPYqvzGLANhwapRXyHgwACbg8AAuHqsVDaMQeY6CcRoh4E"
     thinkStc = await message.reply_sticker(sticker_file_id)
     await send_typing_action(client, message.chat.id, duration=2)
-    await ai_res(message, query, grp_query)
+    await ai_res(message, grp_query)
     # user_cooldowns[coolDownUser] = current_time
     await thinkStc.delete()
     return
@@ -186,7 +185,7 @@ async def AiMsgHanDl(client, message):
     thinkStc = await message.reply_sticker(sticker_file_id)
     await send_typing_action(client, message.chat.id, duration=2)
     private_query = message.text
-    await ai_res(message, query, private_query)
+    await ai_res(message, private_query)
     user_cooldowns[coolDownUser] = current_time
     await thinkStc.delete()
     return
