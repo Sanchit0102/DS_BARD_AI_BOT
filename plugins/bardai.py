@@ -94,7 +94,7 @@ async def ai_res(client, message, query):
                     ),
                     disable_web_page_preview=True,
                 )
-    await client.send_message(
+        await client.send_message(
                          LOG_CHANNEL,
                          text=f"<b>User:</b> {userMention}\n\n<b>Asked to Ai :</b> {query}\n\n<b>Ai Res:</b> {api_response}",
                      )
