@@ -10,7 +10,7 @@ API_HASH = os.environ.get("API_HASH", "f6e58a549da642d7b765744a2f82c6d9")
 PICS = os.environ.get("PICS", "https://envs.sh/_bC.jpg").split()
 ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1562935405').split()]
 DB_URL = os.environ.get("DB_URL", "mongodb+srv://trumbot:trumbot@cluster0.cfkaeno.mongodb.net/?retryWrites=true&w=majority")
-DB_NAME = os.environ.get("DB_NAME", "DSBardAI")
+DB_NAME = os.environ.get("DB_NAME", "DSBardAIBot")
 RemoveBG_API = os.environ.get("RemoveBG_API", "8js65jxBvtyywyLJTGFVzWiV")
 IBB_API = os.environ.get("IBB_API", "843ceb81c0fe834bd1db328e68c32a87")
 AUTH_CHANNEL = int(os.environ.get("AUTH_CHANNEL", "-1002104350566"))  
