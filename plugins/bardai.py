@@ -57,7 +57,6 @@ async def bardandgemini(_: Client, message: Message):
 async def ai_res(message, query):
     try:
         userMention = message.from_user.mention()
-        #DS = f"You are a helpful assistant. Your name is Cypher."
         obj = {'query' : query ,'bot_name' : BOT_NAME , 'bot_admin' : ADMIN_NAME} # , 'system_prompt' : DS }
         url = f"https://bisal-ai-api.vercel.app/biisal"  # dont try to change anything here ⚠️
         res = requests.post(url , data=obj)
@@ -152,7 +151,7 @@ async def grp_res(client, message):
     return
 
 
-@Client.on_message(filters.text & filters.private)
+#@Client.on_message(filters.text & filters.private)
 async def AiMsgHanDl(client, message):
     if message.text.startswith("/"):
         return
