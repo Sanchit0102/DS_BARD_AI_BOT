@@ -27,7 +27,7 @@ async def draw_image(client, message):
 
     # Generate image URL using the API
     #url = f"https://text2img.codesearch.workers.dev/?prompt={query}"
-    url = f"https://magicimage.darkhacker7301.workers.dev/?search={query}"
+    url = f"https://bj-tricks.serv00.net/Ai-image_gen.php?prompt={query}"
     try:
         response = requests.get(url)
         if response.status_code == 200:
