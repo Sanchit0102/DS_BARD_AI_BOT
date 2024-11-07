@@ -5,12 +5,12 @@ import asyncio
 from info import *
 
 # Function to query the AI API
-def ask_query(query, mode='Gemini'):
+def ask_query(query):
     try:
         # Encode the user query for safe URL handling
         encoded_query = urllib.parse.quote(query)
     #    url = f"https://chatwithai.codesearch.workers.dev/?chat={encoded_query}&model={model}"
-        url = f"https://lord-apis.ashlynn.workers.dev/?question={encoded_query}&mode={mode}"
+        url = f"https://lord-apis.ashlynn.workers.dev/?question={encoded_query}&mode=Gemini"
 
         # Send the request to the API
         response = requests.get(url)
