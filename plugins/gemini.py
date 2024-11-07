@@ -3,7 +3,37 @@ import requests
 import urllib.parse
 import asyncio
 from info import *
+import os
+import requests
+from pyrogram import Client, filters
 
+# Replace with your Hugging Face API token
+headers = {"Authorization": "Bearer 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"}
+
+# API URL for the model
+API_URL = "https://api-inference.huggingface.co/models/google/gemma-2-2b"
+
+def query(payload):
+    response = requests.post(API_URL, headers=headers, json=payload)
+    return response.json()
+
+@Client.on_message(filters.command("gpt"))
+async def handle_gpt_command(client, message):
+    # Extract the question from the command
+    question = message.text.split(" ", 1)[1]  # Get text after "gpt"
+
+    # Send a request to the Hugging Face API
+    output = query({"inputs": question})
+
+    # Extract the response from Hugging Face
+    response_text = output[0]["generated_text"].strip()
+
+    # Send the response to the user
+    await client.send_message(message.chat.id, response_text)
+
+
+
+'''
 # Function to query the AI API
 def ask_query(query):
     try:
@@ -49,3 +79,7 @@ async def handle_query(client, message):
     await message.reply_text(
         f"{user_mention}, <b>{response}</b>"
     )
+'''
+
+
+
