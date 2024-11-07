@@ -15,8 +15,8 @@ def query(payload):
     response = requests.post(API_URL, headers=headers, json=payload)
     return response.json()
 
-@Client.on_message(filters.command("gpt"))
-async def handle_gpt_command(client, message):
+@Client.on_message(filters.command("jio"))
+async def handle_gpt_command(bot, message):
     # Extract the question from the command
     question = message.text.split(" ", 1)[1]  # Get text after "gpt"
 
@@ -27,7 +27,7 @@ async def handle_gpt_command(client, message):
     response_text = output[0]["generated_text"].strip()
 
     # Send the response to the user
-    await client.send_message(message.chat.id, response_text)
+    await bot.send_message(message.chat.id, response_text)
 
 
 
