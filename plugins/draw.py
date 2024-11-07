@@ -8,7 +8,7 @@ def generate_long_query(query):
     base_query = f"{query}."
     return base_query
 
-@Client.on_message(filters.command("draw"))
+@Client.on_message(filters.command(["draw", "generate"]))
 async def draw_image(client, message):
     if FSUB:
         is_participant = await get_fsub(client, message)
