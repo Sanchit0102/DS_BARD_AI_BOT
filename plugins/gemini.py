@@ -4,8 +4,6 @@ import urllib.parse
 import asyncio
 from info import *
 import os
-import requests
-from pyrogram import Client, filters
 
 # Replace with your Hugging Face API token
 headers = {"Authorization": "Bearer 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"}
