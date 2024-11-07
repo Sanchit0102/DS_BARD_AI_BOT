@@ -9,6 +9,7 @@ def ask_query(query, model='gpt-4o-mini'):
     try:
         # Prepare the query for safe URL encoding
         encoded_query = urllib.parse.quote(query)
+     #   url = f"https://darkness.ashlynn.workers.dev/chat/?prompt={encoded_query}&model={model}"
         url = f"https://darkness.ashlynn.workers.dev/chat/?prompt={encoded_query}&model={model}"
 
         # Make the API request
