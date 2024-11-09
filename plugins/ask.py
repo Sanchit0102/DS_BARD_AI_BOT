@@ -5,7 +5,7 @@ import requests
 import urllib.parse
 import asyncio
 from info import *
-from database import *
+from helper.database import *
 
 def ask_query(query, model=None):
     default_model = 'mistralai/Mixtral-8x7B-Instruct-v0.1'
