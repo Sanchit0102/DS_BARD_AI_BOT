@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-import requests
+import requests, aiohttp
 from info import *
 from plugins.fsub import get_fsub
 
