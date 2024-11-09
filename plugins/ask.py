@@ -43,7 +43,7 @@ async def ask_query_command(client, message):
         reply = ask_query(user_query)
         await send_typing_action(client, message.chat.id)
         await message.reply_text(
-            text=f"ᴊᴀɪ sʜʀᴇᴇ ʀᴀᴍ {message.from_user.mention}. \nʏᴏᴜʀ ǫᴜᴇʀʏ : {user_text}\n\n[ʙᴀʀᴅ ᴀɪ](https://t.me/DS_BARD_AI_BOT) : \n{reply}",
+            text=f"ᴊᴀɪ sʜʀᴇᴇ ʀᴀᴍ {message.from_user.mention}. \nʏᴏᴜʀ ǫᴜᴇʀʏ : {user_query}\n\n[ʙᴀʀᴅ ᴀɪ](https://t.me/DS_BARD_AI_BOT) : \n{reply}",
             reply_markup=InlineKeyboardMarkup(
                             [
                                 [
