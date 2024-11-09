@@ -4,7 +4,7 @@ from os import environ
 
 id_pattern = re.compile(r'^.\d+$')
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8081707060:AAFhCq5hM8btuDu1i17FGiTQUAqYonk8YyE")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8081707060:AAHnICjedhtkomCYSYbM8RyepnH8SwTYcRE")
 API_ID = int(os.environ.get("API_ID", "16536417"))
 API_HASH = os.environ.get("API_HASH", "f6e58a549da642d7b765744a2f82c6d9")
 PICS = os.environ.get("PICS", "https://envs.sh/_bC.jpg").split()
