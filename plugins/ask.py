@@ -5,6 +5,7 @@ import requests
 import urllib.parse
 import asyncio
 from info import *
+from plugins.fsub import *
 from helper.database import *
 
 def ask_query(query, model=None):
