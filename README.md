@@ -1,46 +1,5 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-<p align="center">ʀᴇᴘᴏ ғᴇᴀᴛᴜʀᴇs</p>
-
-
- ![github card](https://github-readme-stats.vercel.app/api/pin/?username=Sanchit0102&repo=DS_AI_BOT&theme=dark) 
-
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">      
-                                    /tts
-/wall /wallpaper
-/translate
-/upload
-/imgbb
-/scan_ph
-/repo
-/qr
-/get_sticker
-/kang
-/share
-/paste
-/news
-/pass /passward
-/mongo
-/start
-/id /info 
-/lyrics
-/written
-/js /json
-/instadl /ig
-/generate /imagine 
-/image
-/genvid
-/font 
-/run
-/enhance
-/ask
-/resetask
-/carbon
-/bard
-
-////fun.py
-
 ### Features :🚀
 
 ● Advance AI
